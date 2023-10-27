@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chart {
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.xaxis, .yaxis {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  position: relative;
+}
+
+.yaxis {
+  align-items: baseline;
+}
+
+.xaxis li {
+  position: relative;
+  padding-right: 10px;
+}
+
+.xaxis::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #000;
+  top: 0;
+  left: 10px;
+}
+.xaxis li::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+}
+.yaxis-data {
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  height: 100%;
+  gap: 5px;
+}
+.yaxis-data > div {
+  position: relative;
+  display: flex;  
+  margin-bottom: 5px;
+}
+
+.yaxis-data > div::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 10px;
+  height: 1px;
+  top: 50%;
+  background-color: #000;
+}
+.yaxis::before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  height: 100%;
+  background-color: #000;
+  left: 10px;
+}
+.yaxis-item {
+  display: flex;
+  align-items: baseline;  
+}
+
+.yaxis-item-bar {
+  display: block;
+  width: 15px;
+}
+
+.yaxis-item-bar.newyork {
+  background-color: #1f77b4;
+}
+.yaxis-item-bar.washington {
+  background-color: #d56c0e;
+}
+.yaxis-item-bar.houseton {
+  background-color: #2ca02c;
+}
